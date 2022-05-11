@@ -11,14 +11,14 @@ module.exports = {
         clean: true,
         filename: 'assets/js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: 'http://127.0.0.1:8080/',
+        publicPath: 'auto',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     devtool: 'eval-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            filename:  path.resolve(__dirname, 'dist/index.html'),
-            template: './src/pages/index.html'
+            filename: 'index.html',
+            template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'assets/css/[name].css',
@@ -34,11 +34,18 @@ module.exports = {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader"]
             },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
         ]
     },
     devServer: {
         compress: true,
         static: './dist',
         port: 8080,
+        watchFiles: {
+            paths: ['src/**/*', 'dist/**/*']
+        }
     }
 }
