@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 必须的 meta 标签 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>投注计算器</title>
+</head>
+
+<body>
+  <div class="container pt-3" id="app">
+    
+    <nav class="mb-3">
+      <div class="nav nav-pills nav-fill rounded-pill" id="nav-games-tab" role="tablist">
+        <button class="nav-link rounded-pill active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">双色球</button>
+        <button class="nav-link rounded-pill" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">快乐8</button>
+        <button class="nav-link rounded-pill" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">七乐彩</button>
+      </div>
+      <div class="small text-center text-danger">以下内容仅供参考，兑奖请以投注机确认结果为准。</div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+        <div class="d-flex align-items-center px-2 mb-2">
+          <div class="small">开奖号码：</div>
+          <select class="form-select form-select-sm rounded-pill w-auto" aria-label=".form-select-sm example">
+            <option selected>第2022003期</option>
+            <option value="2">第2022002期</option>
+            <option value="3">第2022001期</option>
+          </select>
+        </div>
+
+        <div class="mb-2">
+          <span class="ball red-ball">06</span>
+          <span class="ball red-ball">08</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball blue-ball">11</span>
+        </div>
+
+
+        <nav class="row justify-content-center mb-2">
+          <div class="nav nav-pills nav-fill p-0 nav-tzfs small position-relative" id="ssq-fs-tab" role="tablist">
+            <button class="nav-link active" id="ssq-fushi-tab" data-bs-toggle="tab" data-bs-target="#ssq-fushi" type="button" role="tab" aria-controls="ssq-fushi" aria-selected="true">
+              <span>复式</span>
+            </button>
+            <button class="nav-link" id="ssq-dantuo-tab" data-bs-toggle="tab" data-bs-target="#ssq-dantuo" type="button" role="tab" aria-controls="ssq-dantuo" aria-selected="false">
+              <span>胆拖</span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="tab-content" id="nav-ball-content">
+          <div class="tab-pane fade show active" id="ssq-fushi" role="tabpanel" aria-labelledby="ssq-fushi-tab">
+            <div class="small">我的选号</div>
+            <div class="card" id="ssq-redball"></div>
+            <div class="card" id="ssq-blueball"></div>
+          </div>
+          <div class="tab-pane fade" id="ssq-dantuo" role="tabpanel" aria-labelledby="ssq-dantuo-tab">2</div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+
+
+
+
+
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    </div>
+    
+  </div>
+</body>
+
+</html>
