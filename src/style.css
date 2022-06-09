@@ -1,0 +1,82 @@
+html,
+body {
+    min-height: 100%;
+}
+#app {
+    background-image: url(../public/assets/design.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    min-height: 1900px;
+    background-position: 0 150%;
+}
+
+#nav-games-tab {
+    background-color: #f4f4f4;
+}
+
+#nav-games-tab>.nav-link {
+    color: #000;
+    border-radius: 0;
+}
+#nav-games-tab>.nav-link.active {
+    background-color: #d43b33;
+    color: #fff;
+}
+
+
+.ball {
+    color: aliceblue;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin: .15rem;
+}
+.red-ball {
+    background-color: #f24343;
+}
+.blue-ball {
+    background-color: #4A96F6;
+}
+
+/* 复式胆拖navtab */
+.nav-tzfs {
+    background-color: #ffe5e4;
+}
+
+.nav-tzfs .nav-link {
+    padding: 0;
+    border-radius: 0;
+    color: var(--dark);
+}
+.nav-tzfs .nav-link:first-child::after {
+    content: "";
+    background-color: #000;
+}
+.nav-tzfs .nav-link.active {
+    color: #d43b33;
+    background-color: transparent;
+}
+.nav-tzfs .nav-link span {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.nav-tzfs .nav-link.active span {
+    border-color: #d43b33;
+}
+
+.nav-tzfs .nav-link:first-child::after {
+    content: "";
+    background-color: #ffb2af;
+    position: absolute;
+    right: calc(50% - 1px);
+    top: 8px;
+    width: 2px;
+    height: 19px;
+}
