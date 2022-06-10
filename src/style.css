@@ -2,12 +2,11 @@ html,
 body {
     min-height: 100%;
 }
-#app {
+.bg-image {
     background-image: url(../public/assets/design.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     min-height: 1900px;
-    background-position: 0 150%;
 }
 
 #nav-games-tab {
@@ -27,12 +26,13 @@ body {
 .ball {
     color: aliceblue;
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 26px;
     border-radius: 50%;
     text-align: center;
-    line-height: 30px;
+    line-height: 26px;
     margin: .15rem;
+    -webkit-user-select:none;
+    user-select: none;
 }
 .red-ball {
     background-color: #f24343;
@@ -79,4 +79,36 @@ body {
     top: 8px;
     width: 2px;
     height: 19px;
+}
+
+
+.number-card {
+    padding: .75rem;
+    box-shadow: 0 0 5px 0 #ccc;
+    border-radius: .5rem;
+}
+
+.number {
+    display: inline-block;
+    width: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    margin: .25rem .15rem;
+    box-shadow: 0 0 0 1px #ccc;
+    font-weight: bold;
+    -webkit-user-select:none;
+    user-select: none;
+}
+
+.caculate-card {
+    border: 1px dashed #b3b3b3;
+    padding: .75rem;
+    border-radius: .75rem;
+    background: #fbf9fa;
+}
+
+.table-win-result thead {
+    background-color: #5e7b9e;
+    color: #fff;
 }

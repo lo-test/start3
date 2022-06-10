@@ -9,20 +9,21 @@
 </head>
 
 <body>
-  <div class="container pt-3" id="app">
+  <div class="container py-3" id="app">
     
     <nav class="mb-3">
       <div class="nav nav-pills nav-fill rounded-pill" id="nav-games-tab" role="tablist">
-        <button class="nav-link rounded-pill active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">双色球</button>
-        <button class="nav-link rounded-pill" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">快乐8</button>
-        <button class="nav-link rounded-pill" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">七乐彩</button>
+        <button class="nav-link rounded-pill active" id="nav-ssq-tab" data-bs-toggle="tab" data-bs-target="#nav-ssq" type="button" role="tab" aria-controls="nav-ssq" aria-selected="true">双色球</button>
+        <button class="nav-link rounded-pill" id="nav-kl8-tab" data-bs-toggle="tab" data-bs-target="#nav-kl8" type="button" role="tab" aria-controls="nav-kl8" aria-selected="false">快乐8</button>
+        <button class="nav-link rounded-pill" id="nav-qlc-tab" data-bs-toggle="tab" data-bs-target="#nav-qlc" type="button" role="tab" aria-controls="nav-qlc" aria-selected="false">七乐彩</button>
       </div>
       <div class="small text-center text-danger">以下内容仅供参考，兑奖请以投注机确认结果为准。</div>
     </nav>
 
-    <div class="tab-content" id="nav-tabContent">
+    <div class="tab-content" id="nav-gameContent">
 
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <!-- 双色球 start -->
+      <div class="tab-pane fade show active" id="nav-ssq" role="tabpanel" aria-labelledby="nav-ssq-tab">
 
         <div class="d-flex align-items-center px-2 mb-2">
           <div class="small">开奖号码：</div>
@@ -55,31 +56,978 @@
           </div>
         </nav>
 
-        <div class="tab-content" id="nav-ball-content">
+        <div class="mb-2 ps-3">我的选号</div>
+
+        <div class="tab-content mb-3" id="ssq-ball-content">
           <div class="tab-pane fade show active" id="ssq-fushi" role="tabpanel" aria-labelledby="ssq-fushi-tab">
-            <div class="small">我的选号</div>
-            <div class="card" id="ssq-redball"></div>
-            <div class="card" id="ssq-blueball"></div>
+            <div class="number-card mb-3" id="ssq-fushi-redball">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="ssq_fushi_redball_len">红球：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+              </div>
+            </div>
+            <div class="number-card" id="ssq-fushi-blueball">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="ssq_fushi_redball_len">蓝球：</label>
+                <div class="px-4 border rounded border-primary">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+              </div>
+            </div>
           </div>
-          <div class="tab-pane fade" id="ssq-dantuo" role="tabpanel" aria-labelledby="ssq-dantuo-tab">2</div>
+          <div class="tab-pane fade" id="ssq-dantuo" role="tabpanel" aria-labelledby="ssq-dantuo-tab">
+            <div class="number-card mb-3" id="ssq-dantuo-danma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="ssq_fushi_redball_len">红球：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+              </div>
+            </div>
+            <div class="number-card mb-3" id="ssq-dantuo-blueball">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="ssq_fushi_redball_len">蓝球：</label>
+                <div class="px-4 border rounded border-primary">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+              </div>
+            </div>
+            <div class="number-card mb-3" id="ssq-dantuo-tuoma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="ssq_fushi_redball_len">红球：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="d-flex flex-column align-items-center caculate-card mb-3">
+          <div class="fw-bolder mb-1">投注金额：<span class="text-danger px-2">0</span>注<span class="text-danger px-2">0</span>元</div>
+          <div class="text-danger mb-1">我的命中</div>
+          <div class="d-flex align-items-center">
+            <label for="ssq_fushi_redball_len">红球：</label>
+            <div class="px-3 border rounded border-danger">0个</div>
+            <div class="separator px-2"></div>
+            <label for="ssq_fushi_redball_len">蓝球：</label>
+            <div class="px-3 border rounded border-primary">0个</div>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="text-center fs-5 mb-3">税前奖金是： <span class="text-danger">0</span>元</div>
+
+        <div class="table-win-result">
+          <table class="table table-sm table-bordered small" id="ssq-win-result">
+            <thead>
+              <tr>
+                <td>奖级</td>
+                <td>中奖条件</td>
+                <td>中奖注数</td>
+                <td>单注奖金</td>
+                <td>奖金</td>
+              </tr>
+            </thead>
+            <tbody class="border-top-0">
+              <tr>
+                <td>一等奖</td>
+                <td>6+1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>二等奖</td>
+                <td>6+0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>三等奖</td>
+                <td>5+1</td>
+                <td>0</td>
+                <td>3000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>四等奖</td>
+                <td>5+0/4+1</td>
+                <td>0</td>
+                <td>200</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>五等奖</td>
+                <td>4+0/3+1</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>六等奖</td>
+                <td>0+1/1+1/2+1</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="border-bottom pb-2">说明</div>
+          <ul class="list-unstyled small">
+            <li>1.中奖条件格式为“红球命中个数+蓝球命中个数”,未命中则为“0”。例如：“6+1”为红球命中6个+蓝球命中1个,“6+0”为红球命中6个+蓝球未命中。</li>
+            <li>2.奖金计算结果将根据实际开奖奖金进行录入数据后计算得出，如有偏差，请以官方开奖时公布奖金为准！</li>
+            <li>3.奖金未公布时，A、B分别用来表示一等奖奖金、二等奖奖金。</li>
+          </ul>
+        </div>
       </div>
+      <!-- 双色球 end -->
 
 
 
+      <!-- 快乐8 start -->
+      <div class="tab-pane fade" id="nav-kl8" role="tabpanel" aria-labelledby="nav-kl8-tab">
+        
+
+        <div class="d-flex align-items-center px-2 mb-2">
+          <div class="small">开奖号码：</div>
+          <select class="form-select form-select-sm rounded-pill w-auto" aria-label=".form-select-sm example">
+            <option selected>第2022003期</option>
+            <option value="2">第2022002期</option>
+            <option value="3">第2022001期</option>
+          </select>
+        </div>
+
+        <div class="mb-2">
+          <span class="ball red-ball">06</span>
+          <span class="ball red-ball">08</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball red-ball">06</span>
+          <span class="ball red-ball">08</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+        </div>
 
 
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <nav class="row justify-content-center mb-2">
+          <div class="nav nav-pills nav-fill p-0 nav-tzfs small position-relative" id="kl8-fs-tab" role="tablist">
+            <button class="nav-link active" id="kl8-fushi-tab" data-bs-toggle="tab" data-bs-target="#kl8-fushi" type="button" role="tab" aria-controls="kl8-fushi" aria-selected="true">
+              <span>复式</span>
+            </button>
+            <button class="nav-link" id="kl8-dantuo-tab" data-bs-toggle="tab" data-bs-target="#kl8-dantuo" type="button" role="tab" aria-controls="kl8-dantuo" aria-selected="false">
+              <span>胆拖</span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="mb-2 ps-3">我的选号</div>
+          <div class="d-flex align-items-center px-2 mb-2">
+            <div class="fw-bolder">玩法：</div>
+            <select class="form-select form-select-sm rounded-pill w-auto" aria-label=".form-select-sm example">
+              <option value="1" selected>选一</option>
+              <option value="2">选二</option>
+              <option value="3">选三</option>
+              <option value="4">选四</option>
+              <option value="5">选五</option>
+              <option value="6">选六</option>
+              <option value="7">选七</option>
+              <option value="8">选八</option>
+              <option value="9">选九</option>
+              <option value="10">选十</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tab-content mb-3" id="kl8-ball-content">
+          <div class="tab-pane fade show active" id="kl8-fushi" role="tabpanel" aria-labelledby="kl8-fushi-tab">
+            <div class="number-card mb-3" id="kl8-fushi-redball">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="kl8_fushi_redball_len">基本号码：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+                <span class="number">34</span>
+                <span class="number">35</span>
+                <span class="number">36</span>
+                <span class="number">37</span>
+                <span class="number">38</span>
+                <span class="number">39</span>
+                <span class="number">40</span>
+                <span class="number">41</span>
+                <span class="number">42</span>
+                <span class="number">43</span>
+                <span class="number">44</span>
+                <span class="number">45</span>
+                <span class="number">46</span>
+                <span class="number">47</span>
+                <span class="number">48</span>
+                <span class="number">49</span>
+                <span class="number">50</span>
+                <span class="number">51</span>
+                <span class="number">52</span>
+                <span class="number">53</span>
+                <span class="number">54</span>
+                <span class="number">55</span>
+                <span class="number">56</span>
+                <span class="number">57</span>
+                <span class="number">58</span>
+                <span class="number">59</span>
+                <span class="number">60</span>
+                <span class="number">61</span>
+                <span class="number">62</span>
+                <span class="number">63</span>
+                <span class="number">64</span>
+                <span class="number">65</span>
+                <span class="number">66</span>
+                <span class="number">67</span>
+                <span class="number">68</span>
+                <span class="number">69</span>
+                <span class="number">70</span>
+                <span class="number">71</span>
+                <span class="number">72</span>
+                <span class="number">73</span>
+                <span class="number">74</span>
+                <span class="number">75</span>
+                <span class="number">76</span>
+                <span class="number">77</span>
+                <span class="number">78</span>
+                <span class="number">79</span>
+                <span class="number">80</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center caculate-card mb-3">
+              <div class="fw-bolder mb-1">投注金额：<span class="text-danger px-2">0</span>注<span class="text-danger px-2">0</span>元</div>
+              <div class="text-danger mb-1">我的命中</div>
+              <div class="d-flex align-items-center">
+                <label for="ssq_fushi_redball_len">基本号码：</label>
+                <div class="px-3 border rounded border-danger">0个</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="kl8-dantuo" role="tabpanel" aria-labelledby="kl8-dantuo-tab">
+            <div class="number-card mb-3" id="kl8-dantuo-danma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="kl8_fushi_redball_len">胆码：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+                <span class="number">34</span>
+                <span class="number">35</span>
+                <span class="number">36</span>
+                <span class="number">37</span>
+                <span class="number">38</span>
+                <span class="number">39</span>
+                <span class="number">40</span>
+                <span class="number">41</span>
+                <span class="number">42</span>
+                <span class="number">43</span>
+                <span class="number">44</span>
+                <span class="number">45</span>
+                <span class="number">46</span>
+                <span class="number">47</span>
+                <span class="number">48</span>
+                <span class="number">49</span>
+                <span class="number">50</span>
+                <span class="number">51</span>
+                <span class="number">52</span>
+                <span class="number">53</span>
+                <span class="number">54</span>
+                <span class="number">55</span>
+                <span class="number">56</span>
+                <span class="number">57</span>
+                <span class="number">58</span>
+                <span class="number">59</span>
+                <span class="number">60</span>
+                <span class="number">61</span>
+                <span class="number">62</span>
+                <span class="number">63</span>
+                <span class="number">64</span>
+                <span class="number">65</span>
+                <span class="number">66</span>
+                <span class="number">67</span>
+                <span class="number">68</span>
+                <span class="number">69</span>
+                <span class="number">70</span>
+                <span class="number">71</span>
+                <span class="number">72</span>
+                <span class="number">73</span>
+                <span class="number">74</span>
+                <span class="number">75</span>
+                <span class="number">76</span>
+                <span class="number">77</span>
+                <span class="number">78</span>
+                <span class="number">79</span>
+                <span class="number">80</span>
+              </div>
+            </div>
+            <div class="number-card" id="kl8-dantuo-tuoma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="kl8_fushi_redball_len">拖码：</label>
+                <div class="px-4 border rounded border-primary">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+                <span class="number">31</span>
+                <span class="number">32</span>
+                <span class="number">33</span>
+                <span class="number">34</span>
+                <span class="number">35</span>
+                <span class="number">36</span>
+                <span class="number">37</span>
+                <span class="number">38</span>
+                <span class="number">39</span>
+                <span class="number">40</span>
+                <span class="number">41</span>
+                <span class="number">42</span>
+                <span class="number">43</span>
+                <span class="number">44</span>
+                <span class="number">45</span>
+                <span class="number">46</span>
+                <span class="number">47</span>
+                <span class="number">48</span>
+                <span class="number">49</span>
+                <span class="number">50</span>
+                <span class="number">51</span>
+                <span class="number">52</span>
+                <span class="number">53</span>
+                <span class="number">54</span>
+                <span class="number">55</span>
+                <span class="number">56</span>
+                <span class="number">57</span>
+                <span class="number">58</span>
+                <span class="number">59</span>
+                <span class="number">60</span>
+                <span class="number">61</span>
+                <span class="number">62</span>
+                <span class="number">63</span>
+                <span class="number">64</span>
+                <span class="number">65</span>
+                <span class="number">66</span>
+                <span class="number">67</span>
+                <span class="number">68</span>
+                <span class="number">69</span>
+                <span class="number">70</span>
+                <span class="number">71</span>
+                <span class="number">72</span>
+                <span class="number">73</span>
+                <span class="number">74</span>
+                <span class="number">75</span>
+                <span class="number">76</span>
+                <span class="number">77</span>
+                <span class="number">78</span>
+                <span class="number">79</span>
+                <span class="number">80</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center caculate-card mb-3">
+              <div class="fw-bolder mb-1">投注金额：<span class="text-danger px-2">0</span>注<span class="text-danger px-2">0</span>元</div>
+              <div class="text-danger mb-1">我的命中</div>
+              <div class="d-flex align-items-center">
+                <label for="ssq_fushi_redball_len">胆码：</label>
+                <div class="px-3 border rounded border-danger">0个</div>
+                <div class="separator px-2"></div>
+                <label for="ssq_fushi_redball_len">拖码：</label>
+                <div class="px-3 border rounded border-primary">0个</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="text-center fs-5 mb-3">税前奖金是： <span class="text-danger">0</span>元</div>
+
+        <div class="table-win-result">
+          <table class="table table-sm table-bordered small" id="kl8-win-result">
+            <thead>
+              <tr>
+                <td>奖级</td>
+                <td>中奖条件</td>
+                <td>中奖注数</td>
+                <td>单注奖金</td>
+                <td>奖金</td>
+              </tr>
+            </thead>
+            <tbody class="border-top-0">
+              <tr>
+                <td>一等奖</td>
+                <td>6+1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>二等奖</td>
+                <td>6+0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>三等奖</td>
+                <td>5+1</td>
+                <td>0</td>
+                <td>3000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>四等奖</td>
+                <td>5+0/4+1</td>
+                <td>0</td>
+                <td>200</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>五等奖</td>
+                <td>4+0/3+1</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>六等奖</td>
+                <td>0+1/1+1/2+1</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="border-bottom pb-2">说明</div>
+          <ul class="list-unstyled small">
+            <li>1.中奖条件格式为“红球命中个数+蓝球命中个数”,未命中则为“0”。例如：“6+1”为红球命中6个+蓝球命中1个,“6+0”为红球命中6个+蓝球未命中。</li>
+            <li>2.奖金计算结果将根据实际开奖奖金进行录入数据后计算得出，如有偏差，请以官方开奖时公布奖金为准！</li>
+            <li>3.奖金未公布时，A、B分别用来表示一等奖奖金、二等奖奖金。</li>
+          </ul>
+        </div>
+
+
+      </div>
+      <!-- 快乐8 end -->
 
 
 
+      <!-- 七乐彩 start -->
+      <div class="tab-pane fade" id="nav-qlc" role="tabpanel" aria-labelledby="nav-qlc-tab">
+        <div class="d-flex align-items-center px-2 mb-2">
+          <div class="small">开奖号码：</div>
+          <select class="form-select form-select-sm rounded-pill w-auto" aria-label=".form-select-sm example">
+            <option selected>第2022003期</option>
+            <option value="2">第2022002期</option>
+            <option value="3">第2022001期</option>
+          </select>
+        </div>
+
+        <div class="mb-2">
+          <span class="ball red-ball">06</span>
+          <span class="ball red-ball">08</span>
+          <span class="ball red-ball">09</span>
+          <span class="ball red-ball">17</span>
+          <span class="ball red-ball">22</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball red-ball">31</span>
+          <span class="ball blue-ball">11</span>
+        </div>
 
 
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+        <nav class="row justify-content-center mb-2">
+          <div class="nav nav-pills nav-fill p-0 nav-tzfs small position-relative" id="qlc-fs-tab" role="tablist">
+            <button class="nav-link active" id="qlc-fushi-tab" data-bs-toggle="tab" data-bs-target="#qlc-fushi" type="button" role="tab" aria-controls="qlc-fushi" aria-selected="true">
+              <span>复式</span>
+            </button>
+            <button class="nav-link" id="qlc-dantuo-tab" data-bs-toggle="tab" data-bs-target="#qlc-dantuo" type="button" role="tab" aria-controls="qlc-dantuo" aria-selected="false">
+              <span>胆拖</span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="mb-2 ps-3">我的选号</div>
+
+        <div class="tab-content mb-3" id="qlc-ball-content">
+          <div class="tab-pane fade show active" id="qlc-fushi" role="tabpanel" aria-labelledby="qlc-fushi-tab">
+            <div class="number-card mb-3" id="qlc-fushi-redball">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="qlc_fushi_redball_len">基本号码：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+              </div>
+            </div> 
+          </div>
+
+          <div class="tab-pane fade" id="qlc-dantuo" role="tabpanel" aria-labelledby="qlc-dantuo-tab">
+            <div class="number-card mb-3" id="qlc-dantuo-danma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="qlc_fushi_redball_len">胆码：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+              </div>
+            </div>
+            
+            <div class="number-card mb-3" id="qlc-dantuo-tuoma">
+              <div class="d-flex align-items-center border-bottom pb-1 mb-2">
+                <label for="qlc_fushi_redball_len">拖码：</label>
+                <div class="px-4 border rounded border-danger">0个</div>
+              </div>
+              <div>
+                <span class="number">01</span>
+                <span class="number">02</span>
+                <span class="number">03</span>
+                <span class="number">04</span>
+                <span class="number">05</span>
+                <span class="number">06</span>
+                <span class="number">07</span>
+                <span class="number">08</span>
+                <span class="number">09</span>
+                <span class="number">10</span>
+                <span class="number">11</span>
+                <span class="number">12</span>
+                <span class="number">13</span>
+                <span class="number">14</span>
+                <span class="number">15</span>
+                <span class="number">16</span>
+                <span class="number">17</span>
+                <span class="number">18</span>
+                <span class="number">19</span>
+                <span class="number">20</span>
+                <span class="number">21</span>
+                <span class="number">22</span>
+                <span class="number">23</span>
+                <span class="number">24</span>
+                <span class="number">25</span>
+                <span class="number">26</span>
+                <span class="number">27</span>
+                <span class="number">28</span>
+                <span class="number">29</span>
+                <span class="number">30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center caculate-card mb-3">
+          <div class="fw-bolder mb-1">投注金额：<span class="text-danger px-2">0</span>注<span class="text-danger px-2">0</span>元</div>
+          <div class="text-danger mb-1">我的命中</div>
+          <div class="d-flex align-items-center">
+            <label for="ssq_fushi_redball_len">红球：</label>
+            <div class="px-3 border rounded border-danger">0个</div>
+            <div class="separator px-2"></div>
+            <label for="ssq_fushi_redball_len">蓝球：</label>
+            <div class="px-3 border rounded border-primary">0个</div>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="text-center fs-5 mb-3">税前奖金是： <span class="text-danger">0</span>元</div>
+
+        <div class="table-win-result">
+          <table class="table table-sm table-bordered small" id="qlc-win-result">
+            <thead>
+              <tr>
+                <td>奖级</td>
+                <td>中奖条件</td>
+                <td>中奖注数</td>
+                <td>单注奖金</td>
+                <td>奖金</td>
+              </tr>
+            </thead>
+            <tbody class="border-top-0">
+              <tr>
+                <td>一等奖</td>
+                <td>6+1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>二等奖</td>
+                <td>6+0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>三等奖</td>
+                <td>5+1</td>
+                <td>0</td>
+                <td>3000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>四等奖</td>
+                <td>5+0/4+1</td>
+                <td>0</td>
+                <td>200</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>五等奖</td>
+                <td>4+0/3+1</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>六等奖</td>
+                <td>0+1/1+1/2+1</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row mb-2">
+          <div class="bg-danger w-100 pt-1"></div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="border-bottom pb-2">说明</div>
+          <ul class="list-unstyled small">
+            <li>1.中奖条件格式为“红球命中个数+蓝球命中个数”,未命中则为“0”。例如：“6+1”为红球命中6个+蓝球命中1个,“6+0”为红球命中6个+蓝球未命中。</li>
+            <li>2.奖金计算结果将根据实际开奖奖金进行录入数据后计算得出，如有偏差，请以官方开奖时公布奖金为准！</li>
+            <li>3.奖金未公布时，A、B分别用来表示一等奖奖金、二等奖奖金。</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 七乐彩 end -->
+
     </div>
     
   </div>
+  
 </body>
 
 </html>
