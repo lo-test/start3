@@ -7,10 +7,10 @@ module.exports = {
     entry: {
         index: {
             import: './src/index.js',
-            dependOn: 'common',
+            dependOn: 'bootstrap',
             runtime: false
         },
-        common: 'bootstrap'
+        bootstrap: 'bootstrap'
     },
     output: {
         clean: true,

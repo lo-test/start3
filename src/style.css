@@ -83,9 +83,14 @@ body {
 
 
 .number-card {
-    padding: .75rem;
+    padding: .35rem;
     box-shadow: 0 0 5px 0 #ccc;
     border-radius: .5rem;
+}
+.number-wrap {
+    flex: 0 0 10%;
+    overflow: hidden;
+    text-align: center;
 }
 
 .number {
@@ -99,6 +104,28 @@ body {
     font-weight: bold;
     -webkit-user-select:none;
     user-select: none;
+}
+
+.number.active[data-number-type=basic],
+.number.active[data-number-type=danma],
+.number.active[data-number-type=tuoma] {
+    background-color: #d43b33;
+    color: #fff;
+    box-shadow: 0 0 0 1px #d43b33;
+}
+
+.number.disabled[data-number-type=basic],
+.number.disabled[data-number-type=danma],
+.number.disabled[data-number-type=tuoma] {
+    background-color: #8d8d8d;
+    color: #fff;
+    box-shadow: 0 0 0 1px #8d8d8d;
+}
+
+.number.active[data-number-type=special] {
+    background-color: #4A96F6;
+    color: #fff;
+    box-shadow: 0 0 0 1px #4A96F6;
 }
 
 .caculate-card {
